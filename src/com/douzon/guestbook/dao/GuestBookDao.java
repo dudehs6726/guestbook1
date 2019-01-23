@@ -102,7 +102,7 @@ public class GuestBookDao {
 					+ "			 a.name, "
 					+ "			 a.password, "
 					+ "			 a.message, "
-					+ "			 a.reg_date "  
+					+ "			 DATE_FORMAT(a.reg_date, '%Y-%m-%d %h:%m:%s ') as reg_date "  
 					+ "  	from guestbook a"  
 					+ "  	order by a.no desc ";
 			
