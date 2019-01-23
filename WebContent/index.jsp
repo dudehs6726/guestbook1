@@ -32,17 +32,17 @@
 	<%
 		int index = list.size();
 		for(GuestBookVo vo:list) {
-			
+
 	%>
 	<table width=510 border=1>
 		<tr>
 			<td>[<%=index %>]</td>
 			<td><%=vo.getName() %></td>
 			<td><%=vo.getRegDate() %></td>
-			<td><a href="deleteform.jsp?no=<%=vo.getNo()%>">삭제</a></td>
+			<td><a href="deleteform.jsp?no=<%=vo.getNo() %>">삭제</a></td>
 		</tr>
 		<tr>
-			<td colspan=4><%=vo.getMessage() %></td>
+			<td colspan=4><%=vo.getMessage().replaceAll("\n", "</br>") %></td>
 		</tr>
 	</table>
 	<%
